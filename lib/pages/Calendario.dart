@@ -8,7 +8,7 @@ class Calendario{
   static const _scopes = const [CalendarApi.CalendarScope];
 
   insert(title, startTime, endTime) {
-    var _clientID = new ClientId("771867293863-lafc5dkflulj95fpah11gnk40m93n31l.apps.googleusercontent.com", "");
+    var _clientID = new ClientId("YOUR_CLIENT_ID", "");
     clientViaUserConsent(_clientID, _scopes, prompt).then((AuthClient client) {
       var calendar = CalendarApi(client);
       calendar.calendarList.list().then((value) => print("VAL________$value"));
